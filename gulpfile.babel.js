@@ -97,7 +97,7 @@ gulp.task("manifest", () => {
 });
 
 gulp.task('vue', () => {
-    return buildVue(target)
+    return buildVue(target, environment)
 })
 
 // -----------------
@@ -164,10 +164,11 @@ function buildJS(target) {
     return merge.apply(null, tasks);
 }
 
-function buildVue(target) {
+function buildVue(target, mode) {
     var start = +new Date
     var config = getWebpackConfig({
-        target
+        target,
+        mode
     });
 
     return gulp.src('./src/pages/*.js')
