@@ -15,6 +15,7 @@
     "dist": "npm run chrome-dist && npm run opera-dist && npm run firefox-dist"
   },
   "dependencies": {
+    "element-ui": "^2.4.9",
     "vue": "^2.5.17"
   },
   "devDependencies": {
