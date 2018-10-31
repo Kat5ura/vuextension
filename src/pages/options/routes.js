@@ -19,12 +19,12 @@ const routes = [
         items: [
           {
             index: '1-2',
-            name: '选项1',
+            name: '选项2',
             component: Options
           },
           {
             index: '1-3',
-            name: '选项2',
+            name: '选项3',
             component: Options
           },
         ]
@@ -54,7 +54,37 @@ const routes = [
     name: '配置项2',
     icon: 'setting',
     component: OptionsOther
-  }
+  },
+  {
+    index: '1',
+    name: '配置项3',
+    icon: 'menu',
+    items: [
+      {
+        index: '3-1',
+        name: '选项1',
+        component: Options
+      },
+
+      {
+        group: true,
+        name: '分组1',
+        items: [
+          {
+            index: '3-2',
+            name: '选项2',
+            component: Options
+          },
+          {
+            index: '3-3',
+            name: '选项3',
+            component: Options
+          },
+        ]
+      }
+
+    ],
+  },
 ]
 
 export default routes

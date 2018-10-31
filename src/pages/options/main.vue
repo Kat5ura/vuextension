@@ -15,18 +15,20 @@
 
       <el-container>
         <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
-          <el-menu :default-openeds="['1']" v-for="(item, index) in routes">
-            <el-submenu :index="item.index" v-if="item.items && item.items.length">
-                <template slot="title"><i :class="'el-icon-' + item.icon" v-if="item.icon"></i>{{item.name}}</template>
-                <template v-for="sub in item.items">
-                  <el-menu-item-group v-if="sub.group">
-                    <template slot="title">{{sub.name}}</template>
-                    <el-menu-item :index="resub.index" v-for="resub in sub.items" @click="changeComponent(resub)">{{resub.name}}</el-menu-item>
-                  </el-menu-item-group>
-                  <el-menu-item :index="sub.index" @click="changeComponent(sub)" v-else>
-                    <template slot="title">{{sub.name}}</template>
+          <el-menu :default-openeds="['1']">
+            <el-submenu :index="item.index" v-for="(item, index) in routes" v-if="item.items && item.items.length">
+              <template slot="title"><i :class="'el-icon-' + item.icon" v-if="item.icon"></i>{{item.name}}</template>
+              <template v-for="sub in item.items">
+                <el-menu-item-group v-if="sub.group">
+                  <template slot="title">{{sub.name}}</template>
+                  <el-menu-item :index="resub.index" v-for="resub in sub.items" @click="changeComponent(resub)">
+                    {{resub.name}}
                   </el-menu-item>
-                </template>
+                </el-menu-item-group>
+                <el-menu-item :index="sub.index" @click="changeComponent(sub)" v-else>
+                  <template slot="title">{{sub.name}}</template>
+                </el-menu-item>
+              </template>
             </el-submenu>
             <el-menu-item :index="item.index" @click="changeComponent(item)" v-else>
               <template slot="title"><i :class="'el-icon-' + item.icon" v-if="item.icon"></i>{{item.name}}</template>
@@ -73,6 +75,7 @@
     width: 100%;
     height: 100%;
   }
+
   .el-header {
     background-color: #B3C0D1;
     color: #333;
