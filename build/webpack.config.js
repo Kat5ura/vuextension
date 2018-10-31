@@ -37,19 +37,14 @@ let baseConfig = {
       },
     ]
   },
-  mode: 'development',
+  mode: process.env.NODE_ENV || 'development',
   devtool: 'source-map',
   plugins: [
     // new CleanWebpackPlugin([path.resolve(__dirname, '../dist')], {
     //   root: path.resolve(__dirname, '..')
     // }),
     new VueLoaderPlugin(),
-  ],
-  resolve: {
-    alias: {
-      'vue': 'vue/dist/vue.js'
-    }
-  }
+  ]
 };
 
 
