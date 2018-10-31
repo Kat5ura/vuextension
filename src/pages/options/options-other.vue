@@ -1,10 +1,10 @@
 <template>
-  <div class="options-page1">
+  <div class="options-page2">
     <el-container>
       <el-header>Options Header</el-header>
       <el-main>
-        this is options page
-        <el-button type="primary" @click="open">警告按钮</el-button>
+        this is another options page
+        <el-button type="warning" @click="open">警告按钮</el-button>
       </el-main>
     </el-container>
   </div>
@@ -20,7 +20,7 @@
 
     methods: {
       open() {
-        this.$message('这是一条消息提示');
+        this.$message('这是另一条消息提示');
       }
     }
 
@@ -28,7 +28,7 @@
 </script>
 
 <style scoped>
-  .options-page1 {
+  .options-page2 {
     width: 100%;
     height: 100%;
   }

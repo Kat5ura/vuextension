@@ -1,0 +1,60 @@
+import Options from './options.vue'
+import OptionsOther from './options-other.vue'
+
+const routes = [
+  {
+    index: '1',
+    name: '配置项',
+    icon: 'menu',
+    items: [
+      {
+        index: '1-1',
+        name: '选项1',
+        component: Options
+      },
+
+      {
+        group: true,
+        name: '分组1',
+        items: [
+          {
+            index: '1-2',
+            name: '选项1',
+            component: Options
+          },
+          {
+            index: '1-3',
+            name: '选项2',
+            component: Options
+          },
+        ]
+      },
+
+      {
+        group: true,
+        name: '分组2',
+        items: [
+          {
+            index: '1-4',
+            name: '选项4',
+            component: Options
+          },
+          {
+            index: '1-5',
+            name: '选项5',
+            component: Options
+          },
+        ]
+      }
+
+    ],
+  },
+  {
+    index: '2',
+    name: '配置项2',
+    icon: 'setting',
+    component: OptionsOther
+  }
+]
+
+export default routes

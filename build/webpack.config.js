@@ -44,7 +44,12 @@ let baseConfig = {
     //   root: path.resolve(__dirname, '..')
     // }),
     new VueLoaderPlugin(),
-  ]
+  ],
+  resolve: {
+    alias: {
+      'vue': 'vue/dist/vue.js'
+    }
+  }
 };
 
 
@@ -77,7 +82,6 @@ function getEntries() {
 
 function getHtmlPluginConfig(config) {
   let res = [];
-  let template = path.resolve(__dirname, '../public/index.html');
 
   let entries = Object.keys(getEntries());
   entries.forEach((entry) => {
@@ -85,7 +89,7 @@ function getHtmlPluginConfig(config) {
       filename: entry + '.html',
       chunks: [entry],
       inject: true,
-      template,
+      template: path.resolve(__dirname, `../public/${entry}.html`),
       title: entry + ' Page'
     }))
   });

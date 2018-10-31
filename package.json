@@ -17,11 +17,13 @@
   "dependencies": {
     "element-ui": "^2.4.9",
     "file-loader": "^2.0.0",
-    "vue": "^2.5.17"
+    "page": "^1.11.0",
+    "vue": "^2.5.17",
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "babel-loader": "^8.0.2",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
     "babelify": "^8.0.0",
