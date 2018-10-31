@@ -1,16 +1,8 @@
 <template>
   <div class="options-page">
     <el-container style="height: 100%; border: 1px solid #eee">
-      <el-header style="text-align: right; font-size: 12px">
-        <el-dropdown>
-          <i class="el-icon-setting" style="margin-right: 15px"></i>
-          <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item>查看</el-dropdown-item>
-            <el-dropdown-item>新增</el-dropdown-item>
-            <el-dropdown-item>删除</el-dropdown-item>
-          </el-dropdown-menu>
-        </el-dropdown>
-        <span>王小虎</span>
+      <el-header style="text-align: left; font-size: 16px">
+        <span>Chrome Extensions 配置页</span>
       </el-header>
 
       <el-container>
